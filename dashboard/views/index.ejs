@@ -1,0 +1,1150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= bot.user.username %> Landing</title>
+    <link rel="icon" type="image/png" href="/robot.png">
+    <meta property="og:title" content="Nors">
+    <meta name="og:description" content="Discord Sunucun için geliştirilmiş Türkçe #1 Numaralı Kayıt Botu.">
+    <meta property="og:image" content="/robot.png">
+    <meta property="og:url" content="/">
+    <meta name="theme-color" content="#5a4fcf">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v6.0.0-beta3/css/all.css"
+        ntegrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.css" rel="stylesheet" />
+    <link rel='stylesheet' href="/css/tw.css">
+    <link rel='stylesheet' href="/assets/css/style.css">
+    <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
+    <script>
+        window.onload = function () {
+            twemoji.parse(document.body,
+                { folder: 'svg', ext: '.svg' }
+            );
+        }
+    </script>
+    <style>
+      
+/* From Uiverse.io by elijahgummer */ 
+.containerhero {
+
+background: rgb(75,61,124);
+background: radial-gradient(circle, rgba(75,61,124,1) 0%, rgba(18,19,26,1) 62%, rgba(18,19,26,1) 100%);
+  
+ 
+}
+  
+    </style>
+</head>
+    <script>
+        // On window load, simulate loading of profile image
+        window.addEventListener('load', function () {
+            setTimeout(function () {
+                // Hide the spinner
+                document.getElementById("buttonspinner").style.display = "none";
+                // Show the profile logo
+                document.getElementById("button12").style.display = "block";
+            }, 2000); // Adjust timing as needed
+        });
+    </script>
+
+    <style>
+        /* Loading spinner */
+        .loading-spinner {
+            border: 1px solid #939B9E;
+            border-radius: 50%;
+            border-top: 3px solid #5C6062;
+            width: 20px;
+            height: 20px;
+            animation: spin 1s linear infinite;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Profile image styling */
+        
+    </style>
+
+
+     <%- include('include/header2') -%>
+
+         <div class="containerhero">
+  <% if (user){ %>
+    
+<body class="container max-w-10xl mx-auto">
+    
+
+
+    <section class="section">
+        
+ 
+
+        <div class="py-8 px-4 mx-auto max-w-6xl text-center lg:py-16 mt-8">
+            <h1 class="blackText text-white mb-4 tracking-tight leading-none">
+                <span class="gradientColorlanding"></span>
+            
+              
+                        <span class="gradientlanding-headline tw-text-center rtl:tw-leading-normal sm:tw-text-3xlColorlanding">Make A Professional Discord Server!</span>
+                    </h1>
+            </button>
+
+            <p  class="landing-para tw-text-center tw-text-gray-300">A very customizable multipurpose bot for Welcome Logs Anti & Safety AutoRole anymore ...</p>
+            <br>
+            <br>
+            <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
+                
+                <a href="/invite" target="_blank"
+                 
+<button class="button11">Add To Discord</button>
+
+                   
+                </a>
+                <a href="/dashboard"
+                  <button class="button12">Dashboard</button>
+                      
+                </a>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+ </div>
+          <% }else{ %>
+          
+<body class="container max-w-10xl mx-auto">
+
+      
+
+
+    <section class="section">
+        
+
+        <div class="py-8 px-4 mx-auto max-w-6xl text-center lg:py-16 mt-8">
+            <h1 class="blackText text-white mb-4 tracking-tight leading-none">
+                <span class="gradientColorlanding"></span>
+            
+              
+                        <span class="gradientColorlanding">Make A Professional Discord Server!</span>
+                    </h1>
+            </button>
+
+            <p class="regularText text-white opacity-90 mt-8 mb-8 sm:px-16 lg:px-48">A very customizable multipurpose bot for Welcome Logs Anti & Safety AutoRole anymore ...</p>
+            <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
+                
+                <a href="/invite" target="_blank"
+                 
+<button class="button11">Add To Discord</button>
+
+                   
+                </a>
+                <a href="#features"
+                  <button class="button12">Browse Feature & About</button>
+                </a>
+            </div>
+        </div>
+      </div>
+                  <% } %>
+
+                  </div>
+
+
+<!-- Include Google Font for Robot -->
+
+
+
+
+
+    <section class="section">
+        <div class="py-8 px-4 mx-auto max-w-6xl text-center lg:py-16">
+            <hr class="customHr">
+            <br>
+            <p class="boldText text-white opacity-90 mt-8 mb-2 sm:px-16 lg:px-48">Designed <span
+                    class="gradientColorlanding"><b>ntirely for your server.</b></span> </p>
+            <p class="regularTextIta text-white opacity-60 mb-8 sm:px-16 lg:px-48">
+Used by over 100,000 Discord servers – 24/7</p>
+            <br>
+            <hr class="customHr">
+        </div>
+    </section>
+ 
+            <br><br>
+        
+
+
+            <p class="smallText text-white text-center opacity-90 mt-8 mb-8 sm:px-16 lg:px-48"><span class="mr-2"><i
+                        class="fa-regular fa-check mr-1 opacity-90"></i> <span class="opacity-60"></span></span> <span class="mr-2"><i
+                        class="fa-regular fa-check mr-1 opacity-90"></i>
+                    <span class="opacity-60"></span></span></p>
+        </div>
+    </section>
+
+    
+
+    <style>
+     body1 {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #13151a;
+    color: #ffffff;
+}
+
+    
+.container1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+       .banner {
+    width: 100%;
+    height: 250px;
+    background-image: url('https://06c6223a-b1cf-453b-a153-8d75ddd4569c-00-twiupoa1c2e6.sisko.replit.dev/11.png');
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    margin-bottom: 30px;
+}
+
+        /* Content */
+        .content1 {
+            text-align: center;
+        }
+
+        /* Icon and Small Title */
+        .small-title-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+        }
+
+        .icon-small-title {
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+        }
+
+        .small-title {
+            font-size: 14px;
+            letter-spacing: 1px;
+             font-weight: bold;
+            color: #8e8e8e;
+        }
+
+        /* Large Title */
+        .large-title {
+            font-size: 28px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        /* Description */
+        .description {
+            font-size: 16px;
+            color: #b0b0b0;
+            max-width: 500px;
+            margin: 0 auto 30px;
+        }
+
+        /* Learn More Button */
+        .learn-more {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #2d2d2d;
+            color: #ffffff;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .learn-more:hover {
+            background-color: #3b3b3b;
+        }
+
+/* Adjust layout when the phone is rotated to landscape */
+/* Adjust layout when the phone is rotated to landscape */
+@media screen and (max-width: 1024px) and (orientation: landscape) {
+    .container1 {
+        flex-direction: row;
+        justify-content: space-between; /* Adds spacing between banner and content */
+    }
+
+    .banner {
+        width: 45%; /* Adjust width for landscape mode */
+        margin-right: 20px; /* Add spacing between banner and text */
+        height: 300px;
+    }
+
+    .content1 {
+        width: 45%; /* Adjust width for landscape mode */
+        text-align: left;
+        margin-left: 20px;
+    }
+}
+
+/* Desktop Mode (larger screens, width >= 1024px) */
+@media screen and (min-width: 1024px) {
+    .container1 {
+        flex-direction: row;
+        padding-top: 3%;
+        padding-bottom: 3%;
+    }
+
+    .banner {
+        width: 48%;
+        height: 400px;
+        margin-right: 50px; /* Space between banner and text */
+    }
+
+    .content1 {
+        width: 48%;
+        text-align: left;
+        margin-left: 50px; /* Space between content and banner */
+    }
+
+    /* Move the banner to the left and content to the right */
+    .container1:nth-child(odd) .banner {
+        order: 1;
+        margin-right: 50px;
+    }
+
+    .container1:nth-child(odd) .content1 {
+        order: 2;
+        margin-left: 0;
+    }
+
+    /* For the second container, reverse the order and adjust spacing */
+    .container1:nth-child(even) .banner {
+        order: 2;
+        margin-left: 50px; /* Space when banner is on the right */
+    }
+
+    .container1:nth-child(even) .content1 {
+        order: 1;
+        margin-right: 50px; /* Space when content is on the left */
+    }
+}
+    </style>
+
+<body1>
+    <div class="container1">
+        <!-- Banner Image -->
+        <div class="banner"></div>
+
+        <!-- Content -->
+        <div class="content1">
+            <!-- Icon and Small Title -->
+            <div class="small-title-container">
+                <img src="/welcome.png" alt="Icon" class="icon-small-title">
+                <div class="small-title">WELCOME MESSAGES</div>
+            </div>
+            
+            <!-- Large Title -->
+            <div class="large-title">Let’s Welcome New Members with Style</div>
+            
+            <!-- Description -->
+            <p class="description">
+                Create your own welcome images, which include the user’s username and avatar, as well as a customizable background image!
+            </p>
+            
+            <!-- Learn More Button -->
+            <a href="#" class="learn-more">Learn more about Welcome & Goodbye</a>
+        </div>
+    </div>
+  <div class="container1">
+        <!-- Banner Image -->
+        <div class="banner"></div>
+
+        <!-- Content -->
+        <div class="content1">
+            <!-- Icon and Small Title -->
+            <div class="small-title-container">
+                <img src="/welcome.png" alt="Icon" class="icon-small-title">
+                <div class="small-title">WELCOME MESSAGES</div>
+            </div>
+            
+            <!-- Large Title -->
+            <div class="large-title">Let’s Welcome New Members with Style</div>
+            
+            <!-- Description -->
+            <p class="description">
+                Create your own welcome images, which include the user’s username and avatar, as well as a customizable background image!
+            </p>
+            
+            <!-- Learn More Button -->
+            <a href="#" class="learn-more">Learn more about Welcome & Goodbye</a>
+        </div>
+    </div>
+</body1>
+ <br>
+    <br> 
+    <br>
+    <br><br>
+    <br><br>
+    <br><br>
+    <br>
+    
+
+    <section class="section">
+        <div class="py-8 px-4 mx-auto max-w-6xl text-center lg:py-16">
+            <hr class="customHr">
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <div class="gradientBg rounded-xl">
+                <div class="p-3">
+                    <p class="extraBoldText text-black opacity-90 mt-8 mb-2 sm:px-16 lg:px-48">Nors'u hemen şimdi
+                        sunucuna ekle!</p>
+                    <p class="regularTextIta text-black opacity-80 mb-8 sm:px-16 lg:px-48">Discord Sunucun için en iyi
+                        kayıt sistemine sahip ol!
+                    </p>
+                    <div
+                        class="flex flex-col justify-center items-center space-y-4 sm:flex-row sm:justify-left sm:space-y-0 sm:space-x-4">
+                        <a href="/invite" target="_blank"
+                            class="normalTextBold text-white blackBg inline-flex justify-center items-center py-3 px-6 text-center rounded-full">
+                            Sunucuna ekle
+                            <svg aria-hidden="true" class="ml-2 -mr-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                        </a>
+                    </div>
+                    <p class="smallText text-black opacity-90 mt-8 mb-8 sm:px-16 lg:px-48"><span class="mr-2"><i
+                                class="fa-regular fa-check mr-1 opacity-90"></i> <span class="opacity-60">Tamamiyle
+                                ayarlanabilir</span></span> <span class="mr-2"><i
+                                class="fa-regular fa-check mr-1 opacity-90"></i>
+                            <span class="opacity-60">Tamamen ücretsiz</span></span></p>
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+        </div>
+    </section>
+
+    <footer class="mb-8">
+        <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+            <hr class="customHr">
+            <br>
+            <br>
+            <br>
+            <br>
+            <div class="md:flex md:justify-between">
+                <div class="mb-6 md:mb-0">
+                    <a href="/" class="flex items-center">
+                        <img src="/assets/img/Nors.png" draggable="false" class="h-7 mr-3" alt="IMG">
+                        <span class="regularTextBold text-white self-center whitespace-nowrap">Nors</span>
+                    </a>
+                    <br>
+                    <p class="smallText text-white opacity-80 mb-1">Telif Hakkı © 2023 <a href="https://eleven.js.org"
+                            target="_blank" class="gradientUnderline">Eleven</a> tarafından Nors Bot için tasarlandı.
+                    </p>
+                    <p class="smallText text-white opacity-80 mb-3">Her hakkı saklıdır.</p>
+                    <p class="flex items-center smallText text-white opacity-80 rounded-full md:mr-0">
+                        <img class="w-5 h-5 mr-3 rounded-full" src="/assets/img/TR.svg" draggable="false"
+                            style="object-fit: cover" alt="IMG">
+                        Türkçe
+                    </p>
+                </div>
+                <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+                    <div>
+                        <h2 class="regularTextIta mb-6 text-white">Bot</h2>
+                        <ul class="smallText text-white opacity-80">
+                            <li class="mb-4">
+                                <a href="/invite" target="_blank" class="gradientUnderline">Sunucuna ekle</a>
+                            </li>
+                            <li>
+                                <a href="/privacy" target="_blank" class="gradientUnderline">Gizlilik Politikası</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 class="regularTextIta mb-6 text-white">Oy ver</h2>
+                        <ul class="smallText text-white opacity-80">
+                            <li class="mb-4">
+                                <a href="/vote/topgg" target="_blank" class="gradientUnderline">Top.gg</a>
+                            </li>
+                            <li class="mb-4">
+                                <a href="/vote/dboats" target="_blank" class="gradientUnderline">Discord Boats</a>
+                            </li>
+                            <li>
+                                <a href="/vote/botsgg" target="_blank" class="gradientUnderline">Bots.gg</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 class="regularTextIta mb-6 text-white">Yardım</h2>
+                        <ul class="smallText text-white opacity-80">
+                            <li class="mb-4">
+                                <a href="/wiki" target="_blank" class="gradientUnderline">Wiki</a>
+                            </li>
+                            <li class="mb-4">
+                                <a href="/discord" target="_blank" class="gradientUnderline">Discord Sunucusu</a>
+                            </li>
+                            <li>
+                                <a href="mailto:support@norsbot.xyz" class="gradientUnderline">support@norsbot.xyz</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <br>
+    <br>
+
+</body>
+<style>
+  @import"https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap";
+
+  :root {
+      --primaryColor: #110f15;
+      --secondaryColor: #fff;
+      --tertiaryColor: #B4B4F1;
+      --quaColor: #303236;
+    --back: #5d5dea
+  }
+
+  *,
+  ::after,
+  ::before {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box
+  }
+
+  button:focus {
+      outline: none
+  }
+
+  html {
+      scroll-behavior: smooth
+  }
+
+  body {
+      overflow-x: hidden;
+       perspective: 1000px;
+        font-family: Arial, sans-serif;
+      
+      transition: all 0.1s linear;
+  background: #12131a;
+    
+      background: radial-gradient(circle, rgba(18,19,26,1) 0%, rgba(18,19,26,1) 62%, rgba(18,19,26,1) 100%);
+
+        border-bottom: 1px solid rgba(85, 92, 124, 0.22);
+
+  }
+
+  img {
+      -webkit-user-select: none;
+      -ms-user-select: none;
+      user-select: none
+  }
+
+  a:hover {
+      text-decoration: none;
+      color: unset !important
+  }
+
+  br {
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none
+  }
+
+  @media only screen and (min-width: 640px) {
+      .section {
+          padding-top: 3%;
+          padding-bottom: 3%
+      }
+      .blackText {
+          font-size: 55px
+      }
+      .sectionGrid {
+          display: grid;
+          align-items:center;
+          grid-template-columns: auto auto;
+          grid-gap: 6%;
+      }
+
+      .sectionGridItemRight {
+          justify-self: end
+      }
+  }
+
+  @media only screen and (max-width: 640px) {
+      .section {
+          padding-top: 4rem;
+          padding-bottom: 4rem
+      }
+      .blackText {
+          font-size: 40px
+      }
+      .sectionGridItemRight {
+          padding-top: 1em
+      }
+      .sidebar {
+          background-color: var(--primaryColor)
+      }
+  }
+
+  nav {
+      /*background-color: var(--primaryColor);*/
+      -webkit-backdrop-filter: blur(15px);
+      backdrop-filter: blur(15px)
+  }
+
+  .blackText {
+      font-weight: 800;
+      line-height: 1.2em
+  }
+
+  .extraBoldText {
+      font-weight: 800;
+      font-size: 35px
+  }
+
+  .boldText {
+      font-weight: 500;
+      font-size: 25px
+  }
+
+  .regularTextBold {
+      font-weight: 600;
+      font-size: 23px
+  }
+
+  .regularTextIta {
+      font-weight: 400;
+      font-size: 20px
+  }
+
+  .regularText {
+      font-weight: 500;
+      font-size: 20px
+  }
+
+  .normalTextBold {
+      font-weight: 600;
+      font-size: 16px
+  }
+
+  .normalText {
+      font-weight: 500;
+      font-size: 16px
+  }
+
+  .smallTextBold {
+      font-weight: 600;
+      font-size: 16px
+  }
+
+  .smallText {
+      font-weight: 400;
+      font-size: 16px
+  }
+
+  .gradientBg {
+      background-image: linear-gradient(to right, var(--back) , var(--back))
+  }
+
+  .blackBg {
+      background-color: #000;
+      box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s linear
+  }
+
+  .secBg {
+      background-color: transparent;
+      transition: all 0.3s linear
+  }
+
+  .secBg:hover {
+      background-color: #fff;
+      box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s linear
+  }
+
+  .blackBg:hover {
+      background-color: #fff;
+      box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s linear
+  }
+
+  .coloredBg:hover {
+      background-color: var(--secondaryColor)
+  }
+
+  .gradientColor {
+      background: var(--secondaryColor);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent
+  }
+    .landing-headline {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 44px;
+      line-height: 50px;
+      letter-spacing: -0.02em;
+      font-feature-settings: 'pnum' on, 'lnum' on;
+
+      background: linear-gradient(
+          180deg,
+          rgba(171, 180, 255, 0) 0%,
+          rgba(171, 180, 255, 0.6) 110.83%
+        ),
+        #ffffff;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .landing-headline-sec {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 40px;
+      letter-spacing: -0.02em;
+      font-feature-settings: 'pnum' on, 'lnum' on;
+
+      color: #ffffff;
+    }
+
+    .landing-tag-text {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 21px;
+      letter-spacing: 0.02em;
+      text-transform: capitalize;
+      font-feature-settings: 'pnum' on, 'lnum' on;
+
+      background: linear-gradient(
+        90.01deg,
+        #e59cff -68.15%,
+        #ba9cff 15.92%,
+        #9cb2ff 100%
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      background-blend-mode: screen;
+    }
+
+    .landing-para {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 26px;
+      font-feature-settings: 'pnum' on, 'lnum' on;
+      margin: 0;
+    }
+
+    .landing-dropdown-item {
+      font-family: 'Manrope';
+    }
+
+    .landing-servers-bg {
+      background: linear-gradient(88deg, #171821 21.84%, rgba(23, 24, 33, 0) 100%);
+    }
+
+    .landing-servers-bg-2 {
+      background: linear-gradient(88deg, #4d4bec 21.84%, rgba(23, 24, 33, 0) 100%);
+    }
+
+    .landing-footer {
+      background: linear-gradient(180deg, #171821 0%, rgba(23, 24, 33, 0) 100%);
+    }
+
+    .landing-flyout-bg {
+      background: rgba(18, 19, 26, 0.6);
+    }
+
+    .table__row:nth-child(odd) {
+      background-color: #15161e;
+    }
+
+    .spearete__line {
+      background-color: #282a37 !important;
+      opacity: 1 !important;
+      border-top: 0;
+    }
+
+    .stats__number {
+      text-transform: capitalize;
+      font-feature-settings: 'pnum' on, 'lnum' on;
+      background: linear-gradient(
+        90.01deg,
+        #e59cff -68.15%,
+        #ba9cff 15.92%,
+        #9cb2ff 100%
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      background-blend-mode: screen;
+    }
+
+    /* FEATURE PAGE */
+    .features-tag-icon {
+      background: radial-gradient(
+        64.12% 64.12% at 50% 50%,
+        rgba(154, 158, 179, 0.2) 0%,
+        rgba(154, 158, 179, 0) 100%
+      );
+      border: 1.5px solid rgba(154, 158, 178, 0.2);
+      border-radius: 4px;
+    }
+    .features-tag-text {
+      font-style: normal;
+      font-weight: 800;
+      font-size: 14px;
+      line-height: 21px;
+      text-transform: uppercase;
+      color: #9a9eb3;
+    }
+    .features-hero-bg {
+      background: linear-gradient(360deg, #1d1f2b -99.48%, #12131a 25.22%);
+      border-bottom: 1px solid rgba(85, 92, 124, 0.22);
+    }
+    .feature_tag_span span {
+      color: #ebecf2;
+    }
+    .feature-card-bg {
+      background: linear-gradient(
+        122.02deg,
+        #171821 30.76%,
+        rgba(23, 24, 33, 0) 116.87%
+      );
+    }
+
+    @media (max-width: 1200px) {
+      .landing-headline {
+        font-size: 38px;
+      }
+      .landing-headline-sec {
+        font-size: 30px;
+      }
+      .landing-servers-bg {
+        background: linear-gradient(
+          340deg,
+          #171821 21.84%,
+          rgba(23, 24, 33, 0) 100%
+        );
+      }
+    }
+
+    .premium__plan--popular {
+      position: relative;
+      background-size: 100%;
+      border-image: linear-gradient(380deg, #819aff11, #5753ec) 30;
+      border-style: solid;
+      border-width: 1px;
+    }
+
+    @keyframes avatar-spin {
+      0% {
+        transform: rotate(0);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    .switch-plan-bg {
+      background: linear-gradient(180deg, #171821 0%, rgba(23, 24, 33, 0) 215.47%);
+      border-top: 2px solid #1c1d26;
+    }
+    .switch-plan-bg-active {
+      background: linear-gradient(
+        144.36deg,
+        #282a37c4 20.88%,
+        rgba(40, 42, 55, 0) 289.01%
+      );
+      background: linear-gradient(
+        144.36deg,
+        #282a37c4 20.88%,
+        rgba(40, 42, 55, 0) 289.01%
+      );
+      border-top: 1px solid #3a3d4d;
+    }
+
+    .mobile-table {
+      display: none !important;
+    }
+
+    @media screen and (max-width: 639px) {
+      .mobile-table {
+        display: block !important;
+      }
+    }
+
+    .premium_tier_2_bg {
+      background: radial-gradient(
+          259.34% 259.34% at 230.67% -159.34%,
+          rgba(126, 103, 255, 0.2) 0%,
+          rgba(126, 103, 255, 0) 100%
+        ),
+        #171821;
+    }
+
+    .premium_hero_bg {
+      background-image: url('../public/static/landing/premium-bg.svg');
+    }
+
+    .legal-markdown h1,
+    h2 {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 40px;
+      letter-spacing: -0.02em;
+      font-feature-settings: 'pnum' on, 'lnum' on;
+      margin-bottom: 28px;
+
+      color: #ffffff;
+    }
+
+    .legal-markdown h1,
+    .legal-markdown h2 {
+      font-style: normal;
+      font-weight: 800;
+      font-size: 24px;
+      line-height: 40px;
+      letter-spacing: -0.02em;
+      font-feature-settings: 'pnum' on, 'lnum' on;
+      margin-bottom: 28px;
+      margin-top: 28px;
+      color: #ffffff;
+      position: relative;
+      text-transform: capitalize;
+    }
+
+    .legal-markdown h1::before,
+    .legal-markdown h2::before {
+      content: '#';
+      display: inline-block;
+      top: 0;
+      left: -20px;
+      color: #343645;
+      padding-right: 12px;
+    }
+
+    .legal-markdown li,
+    .legal-markdown p {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 26px;
+      font-feature-settings: 'pnum' on, 'lnum' on;
+      margin: 0;
+      color: #8d91a9;
+    }
+
+    .nav_menu_trigger svg {
+      transition: rotate 0.2s ease;
+    }
+
+    .nav_menu_trigger[data-state='open'] svg {
+      rotate: 180deg;
+    }
+
+    .navbar_membership_3 {
+      border: 2px solid rgb(192, 198, 238);
+      padding: 5px;
+    }
+
+    .navbar_membership_2 {
+      border: 2px solid rgb(238, 198, 98);
+      padding: 5px;
+    }
+
+    .navbar_membership_1 {
+      border: 2px solid rgb(214, 215, 219);
+      padding: 5px;
+    }
+
+    .transfer_arrow {
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .rtl_arrow {
+      right: 95%;
+      transform: rotate(180deg);
+    }
+
+    @media screen and (max-width: 1200px){
+      .transfer_arrow {
+        top: 65%;
+      }
+
+      .rtl_arrow {
+        right: 87%;
+      }
+    }
+.gradientColorlanding {
+      font-style: normal;
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 50px;
+  letter-spacing: -0.02em;
+  font-feature-settings: 'pnum' on, 'lnum' on;
+
+  background: linear-gradient(
+      180deg,
+      rgba(171, 180, 255, 0) 0%,
+      rgba(171, 180, 255, 0.6) 110.83%
+    ),
+    #ffffff;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+  .gradientUnderlineWH {
+      text-decoration: underline;
+      text-underline-position: under;
+      text-decoration-color: var(--secondaryColor)
+  }
+
+  .gradientUnderline:hover {
+      text-decoration: underline;
+      text-underline-position: under;
+      text-decoration-color: var(--secondaryColor)
+  }
+
+  .whiteUnderline:hover {
+      text-decoration: underline;
+      text-underline-position: under;
+      text-decoration-color: white
+  }
+
+  .customHr {
+      border: 1px solid var(--quaColor);
+      opacity: 70%
+  }
+
+  .card {
+      border-top: 1px solid var(--quaColor)
+  }
+
+  .cardWBg {
+      background-color: #2c2c30;
+      box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1)
+  }
+
+  .sidebar {
+      border-right: 1px solid var(--quaColor)
+  }
+
+  .blackBgActive {
+      background-color: #fff;
+      box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s linear;
+      color: #000
+  }
+.button11 {
+  min-width: 120px;
+
+  position: relative;
+  cursor: pointer;
+
+  padding: 12px 10px;
+  border: 0;
+  border-radius: 7px;
+
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+ background: rgb(24,41,144);
+background: linear-gradient(236deg, rgba(24,41,144,1) 0%, rgba(93,93,234,1) 0%);
+
+  color: white;
+
+  transition: all 1s cubic-bezier(0.15, 0.83, 0.66, 1);
+}
+
+
+
+.button12 {
+  min-width: 120px;
+
+  position: relative;
+  cursor: pointer;
+
+  padding: 12px 10px;
+  border: 0;
+  border-radius: 7px;
+
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+ background: rgb(24,41,144);
+background: linear-gradient(236deg, rgba(24,41,144,1) 0%, rgba(30,30,43,1) 0%);
+  color: white;
+
+  transition: all 1s cubic-bezier(0.15, 0.83, 0.66, 1);
+}
+
+  .blackBgActive {
+      background-color: #fff;
+      box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s linear
+  }
+</style>
+             <script>
+                const highlightCircle = document.querySelector('.highlight-circle');
+                const serverCards = document.querySelectorAll('.server-card');
+                const circleRect = highlightCircle.getBoundingClientRect();
+
+                function checkHighlight() {
+                    serverCards.forEach(server => {
+                        const serverRect = server.getBoundingClientRect();
+                        const centerPoint = (serverRect.left + serverRect.right) / 2;
+
+                        // If the server card's center is within the circle, apply the highlight class
+                        if (centerPoint >= circleRect.left && centerPoint <= circleRect.right) {
+                            server.classList.add('highlight');
+                        } else {
+                            server.classList.remove('highlight');
+                        }
+                    });
+                }
+
+                setInterval(checkHighlight, 100);
+            </script>
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.js"></script>
+
+</html>

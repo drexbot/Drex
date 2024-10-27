@@ -1,0 +1,458 @@
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v6.0.0-beta3/css/all.css"
+        ntegrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.css" rel="stylesheet" />
+    <link rel='stylesheet' href="/assets/css/style.css">
+    <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
+    <script>
+        window.onload = function () {
+            twemoji.parse(document.body,
+                { folder: 'svg', ext: '.svg' }
+            );
+        }
+    </script>
+    <style>
+        img.emoji {
+            width: 1em;
+            pointer-events: none;
+            display: inline-block;
+        }
+       .logohero {
+    position: absolute;
+    top: 20px;
+    left: 2px;
+
+  
+       }
+             .texthero {
+          position: absolute;
+          top: 20px;
+          left: 10px; /* Positioning the logo to the top-right of the page */
+        }
+            .profile {
+              position: absolute;
+              top: 20px;
+              right: 20px; /* Positioning the logo to the top-right of the page */
+            }
+            .profile img {
+              border-radius: 50%; /* Make the image circular */
+              width: 50px;
+              height: 50px;
+              cursor: pointer;
+            }
+            .menu {
+              background-color: #171821;
+              padding: 20px;
+              
+              border-radius: 10px;
+            
+              width: 200px;
+              position: absolute;
+              display: none; /* Hidden by default */
+              top: 80px;
+              right: 3px; /* Align the menu to the right, just below the profile */
+                 border: 1px solid #1e202c; /* Add border around the menu */
+            }
+            .menu ul {
+              list-style-type: none;
+              padding: 0;
+              margin: 0;
+            }
+            .menu ul li {
+              margin: 10px 0;
+            }
+            .menu ul li a {
+              color: white;
+              text-decoration: none;
+              display: flex;
+              align-items: center;
+            }
+            .menu ul li a i {
+              margin-right: 10px;
+            }
+            .logout {
+              color: red;
+            }
+          </style>
+    </style>
+</head>
+
+ <% if (user){ %>
+    
+<nav class="sticky w-full z-20 top-0 left-0">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <a href="/" class="flex items-center">
+           
+            <span class="regularTextBold text-white self-center texthero  whitespace-nowrap">RoBot</span>
+        </a>
+    
+        <div class="profile">
+          <!-- User profile image as a circular logo -->
+    <img src="<%= user.avatar ? `https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}.png` : 'https://via.placeholder.com/50' %>" alt="Profile Picture" id="profile-logo">
+    <div class="menu" id="menu">
+      <h3><%= user.username %></h3>
+      <ul>
+        <li><a href="#"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+        <li><a href="#"><i class="fas fa-cogs"></i> Settings</a></li>
+        <li><a href="#"><i class="fas fa-question-circle"></i> Support</a></li>
+        <li><a href="#"><i class="fas fa-star"></i> Premium</a></li>
+        <li><a href="/logout" class="logout"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+      </ul>
+    </div>
+        </div>
+        <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+            <ul
+                class="text-white flex flex-col p-4 md:p-0 mt-4 border border-gray-800 rounded-xl md:flex-row md:space-x-8 md:mt-0 md:border-0">
+                <li>
+                    <a href="#top"
+                        class="normalText text-white whiteUnderline block py-2 pl-3 pr-6 rounded md:hover:bg-transparent md:p-0"><i class="fa-regular fa-house-blank"></i></a>
+                </li>
+                <li>
+                    <a href="#features"
+                        class="normalText text-white whiteUnderline block py-2 pl-3 pr-6 rounded md:hover:bg-transparent md:p-0">Feature</a>
+                </li>
+                <li>
+                    <a href="/commands"
+                        class="normalText text-white whiteUnderline block py-2 pl-3 rounded md:hover:bg-transparent md:p-0">Commands</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<% }else{ %>
+    <nav class="sticky w-full z-20 top-0 left-0">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <a href="/" class="flex items-center">
+            <img src="/robonobg.png" draggable="false" class="h-7 mr-3" alt="IMG">
+            <span class="regularTextBold text-white self-center whitespace-nowrap">RoBot</span>
+        </a>
+        <div class="flex md:order-2">
+            <a href="/dashboard" target="_blank"><button type="button"
+                    class="normalTextBold text-white button111 rounded-full px-6 py-3 text-center mr-3 md:mr-0"><i class=""></i>Login</button></a>
+           
+        </div>
+        <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+            <ul
+                class="text-white flex flex-col p-4 md:p-0 mt-4 border border-gray-800 rounded-xl md:flex-row md:space-x-8 md:mt-0 md:border-0">
+                <li>
+                    <a href="#top"
+                        class="normalText text-white whiteUnderline block py-2 pl-3 pr-6 rounded md:hover:bg-transparent md:p-0"><i class="fa-regular fa-house-blank"></i></a>
+                </li>
+                <li>
+                    <a href="#features"
+                        class="normalText text-white whiteUnderline block py-2 pl-3 pr-6 rounded md:hover:bg-transparent md:p-0">Feature</a>
+                </li>
+                <li>
+                    <a href="/commands"
+                        class="normalText text-white whiteUnderline block py-2 pl-3 rounded md:hover:bg-transparent md:p-0">Commands</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+      <% } %>
+      </div>
+
+          <script>
+            document.addEventListener('DOMContentLoaded', () => {
+              const profileLogo = document.getElementById('profile-logo');
+              const menu = document.getElementById('menu');
+
+              // Show menu on click
+              profileLogo.addEventListener('click', (event) => {
+                event.preventDefault(); // Prevent any default behavior (just in case)
+
+                // Toggle the menu visibility
+                if (menu.style.display === 'none' || menu.style.display === '') {
+                  menu.style.display = 'block';
+                } else {
+                  menu.style.display = 'none';
+                }
+              });
+
+              // Hide menu when clicking anywhere else
+              document.addEventListener('click', (event) => {
+                if (!menu.contains(event.target) && event.target !== profileLogo) {
+                  menu.style.display = 'none'; // Hide the menu if clicking outside of it
+                }
+              });
+            });
+          </script>
+<style>
+ @import"https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap";
+
+  :root {
+      --primaryColor: #110f15;
+      --secondaryColor: #fff;
+      --tertiaryColor: #B4B4F1;
+      --quaColor: #303236;
+    --back: #5d5dea
+  }
+
+  *,
+  ::after,
+  ::before {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box
+  }
+
+  button:focus {
+      outline: none
+  }
+
+  html {
+      scroll-behavior: smooth
+  }
+.button111 {
+  min-width: 80px;
+    font-size: 10px;
+  position: relative;
+  cursor: pointer;
+
+  padding: 8px 10px;
+  border: 0;
+  border-radius: 7px;
+
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+ background: rgb(24,41,144);
+background: linear-gradient(236deg, rgba(24,41,144,1) 0%, rgba(93,93,234,1) 0%);
+
+  color: white;
+
+  transition: all 1s cubic-bezier(0.15, 0.83, 0.66, 1);
+}
+
+.button11::before {
+  content: "";
+  width: 70%;
+  height: 1px;
+
+  position: absolute;
+  bottom: 0;
+  left: 15%;
+
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 1) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  opacity: 0.2;
+
+  transition: all 1s cubic-bezier(0.15, 0.83, 0.66, 1);
+}
+  body {
+      font-family: "Inter";
+      transition: all 0.1s linear;
+      background-color: var(--primaryColor)
+  }
+
+  img {
+      -webkit-user-select: none;
+      -ms-user-select: none;
+      user-select: none
+  }
+
+  a:hover {
+      text-decoration: none;
+      color: unset !important
+  }
+
+  br {
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none
+  }
+
+  @media only screen and (min-width: 640px) {
+      .section {
+          padding-top: 3%;
+          padding-bottom: 3%
+      }
+      .blackText {
+          font-size: 55px
+      }
+      .sectionGrid {
+          display: grid;
+          align-items:center;
+          grid-template-columns: auto auto;
+          grid-gap: 6%;
+      }
+
+      .sectionGridItemRight {
+          justify-self: end
+      }
+  }
+
+  @media only screen and (max-width: 640px) {
+      .section {
+          padding-top: 4rem;
+          padding-bottom: 4rem
+      }
+      .blackText {
+          font-size: 40px
+      }
+      .sectionGridItemRight {
+          padding-top: 1em
+      }
+      .sidebar {
+          background-color: var(--primaryColor)
+      }
+  }
+
+  nav {
+      /*background-color: var(--primaryColor);*/
+      -webkit-backdrop-filter: blur(15px);
+      backdrop-filter: blur(15px)
+  }
+
+  .blackText {
+      font-weight: 800;
+      line-height: 1.2em
+  }
+
+  .extraBoldText {
+      font-weight: 800;
+      font-size: 35px
+  }
+
+  .boldText {
+      font-weight: 500;
+      font-size: 25px
+  }
+
+  .regularTextBold {
+      font-weight: 600;
+      font-size: 23px
+  }
+
+  .regularTextIta {
+      font-weight: 400;
+      font-size: 20px
+  }
+
+  .regularText {
+      font-weight: 500;
+      font-size: 20px
+  }
+
+  .normalTextBold {
+      font-weight: 600;
+      font-size: 16px
+  }
+
+  .normalText {
+      font-weight: 500;
+      font-size: 16px
+  }
+
+  .smallTextBold {
+      font-weight: 600;
+      font-size: 16px
+  }
+
+  .smallText {
+      font-weight: 400;
+      font-size: 16px
+  }
+
+  .gradientBg {
+      background-image: linear-gradient(to right, var(--back) , var(--back))
+  }
+
+  .blackBg {
+      background-color: #000;
+      box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s linear
+  }
+
+  .secBg {
+      background-color: transparent;
+      transition: all 0.3s linear
+  }
+
+  .secBg:hover {
+      background-color: #fff;
+      box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s linear
+  }
+
+  .blackBg:hover {
+      background-color: #fff;
+      box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s linear
+  }
+
+  .coloredBg:hover {
+      background-color: var(--secondaryColor)
+  }
+
+  .gradientColor {
+      background: var(--secondaryColor);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent
+  }
+.gradientColorlanding {
+      background: linear-gradient(to right, var(--secondaryColor) , var(--tertiaryColor));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent
+  }
+  .gradientUnderlineWH {
+      text-decoration: underline;
+      text-underline-position: under;
+      text-decoration-color: var(--secondaryColor)
+  }
+
+  .gradientUnderline:hover {
+      text-decoration: underline;
+      text-underline-position: under;
+      text-decoration-color: var(--secondaryColor)
+  }
+
+  .whiteUnderline:hover {
+      text-decoration: underline;
+      text-underline-position: under;
+      text-decoration-color: white
+  }
+
+  .customHr {
+      border: 1px solid var(--quaColor);
+      opacity: 70%
+  }
+
+  .card {
+      border-top: 1px solid var(--quaColor)
+  }
+
+  .cardWBg {
+      background-color: #2c2c30;
+      box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1)
+  }
+
+  .sidebar {
+      border-right: 1px solid var(--quaColor)
+  }
+
+  .blackBgActive {
+      background-color: #fff;
+      box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s linear;
+      color: #000
+  }
+
+  .blackBgActive {
+      background-color: #fff;
+      box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s linear
+  }
+</style>
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.js"></script>

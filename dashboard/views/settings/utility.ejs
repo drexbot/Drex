@@ -1,0 +1,443 @@
+<%- include('../include/source'); -%>
+
+<html>
+    <head>
+    <title><%= guild.name %> - Utility</title>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Latest compiled and minified CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+
+        <link rel="stylesheet" href="/css/index.css">
+        <link rel="stylesheet" href="/css/dashboard.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
+        <script src="/dashboard.js"></script>
+        <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+
+    </head>
+    <body>
+<div class="wrapper">
+  
+    <%- include('../include/sidemenu'); -%>
+
+    <!-- Settings -->
+    <%- include('../include/header'); -%>
+<section class="content">
+    <div class="overview-all">
+        <h1>Utility</h1>
+        <hr style="width: 90%; margin: 20px auto;">
+
+        <form method="POST">
+               <button type="submit" class="btn btn-save">
+                <i class="fas fa-save"></i> Save Changes
+            </button>     
+            <div class="row mt-3" style="justify-content: center;">
+         
+            
+                <div class="col-md-6 my-1 cart_mod1 bg-edit">
+                    <div>
+                        <div style="position: relative;">
+                            <div class="d-flex align-items-center">
+                                <input type="checkbox" class="toggle" name="commandsEnabled" style="right: 0; position: absolute;" <% if (commandsEnabled) { %> checked <% } %>>
+                                <h5 class="text-light feature-title mb-0 ml-2">/come Custom</h5>
+                                <button type="button" class="btn btn-secondary btn-sm ml-2" onclick="toggleSection('waitCommandSettings')">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <div id="waitCommandSettings" class="collapsible-section" style="display: none; margin-top: 20px;">
+                      
+
+                        <% if (comeEmbed && comeEmbed.enabled) { %>
+                            <div class="form-group mt-3">
+                                <label for="embedTitle">Embed Title</label>
+                                <input type="text" class="form-control" name="embedTitle" placeholder="Title" value="<%= comeEmbed.title %>">
+                            </div>
+
+                            <div class="form-group mt-3">
+                                <label for="embedDescription">Embed Description</label>
+                                <input type="text" class="form-control" name="embedDescription" placeholder="Description" value="<%= comeEmbed.description %>">
+                            </div>
+
+                            <div class="form-group mt-3">
+                                <label for="embedImage">Embed Image URL</label>
+                                <input type="text" class="form-control" name="embedImage" placeholder="Image URL" value="<%= comeEmbed.image %>">
+                            </div>
+
+                            <div class="form-group mt-3">
+                                <label for="embedThumbnail">Embed Thumbnail URL</label>
+                                <input type="text" class="form-control" name="embedThumbnail" placeholder="Thumbnail URL" value="<%= comeEmbed.thumbnail %>">
+                            </div>
+                        <% } else { %>
+                            <div class="form-group mt-3">
+                                <label for="content">Content</label>
+                                <input type="text" class="form-control" name="content" placeholder="Content" value="<%= comeEmbed ? comeEmbed.content : '' %>">
+                            </div>
+                        <% } %>
+
+                        <button type="submit" class="btn btn-success mt-3">Save Changes</button>
+                    </div>
+                </div>
+
+                <!-- $avatar Command -->
+                <div class="col-md-6 my-1 cart_mod1 bg-edit">
+                    <div>
+                        <div style="position: relative;">
+                            <div class="d-flex align-items-center">
+                                <input type="checkbox" class="toggle" name="avatarCommandEnabled" style="right: 0; position: absolute;" <% if (avatarCommandEnabled) { %> checked <% } %>>
+                                <h5 class="text-light feature-title mb-0 ml-2">/avatar Command</h5>
+                             
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Collapsible Section for /avatar Command Settings -->
+                      
+                    </div>
+                         <div class="col-md-6 my-1 cart_mod1 bg-edit">
+                    <div>
+                        <div style="position: relative;">
+                            <div class="d-flex align-items-center">
+                                <input type="checkbox" class="toggle" name="helpCommandEnabled" style="right: 0; position: absolute;" <% if (helpCommandEnabled) { %> checked <% } %>>
+                                <h5 class="text-light feature-title mb-0 ml-2">/help Commands</h5>
+                               
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Collapsible Section for /avatar Command Settings -->
+                      
+                    </div>  
+                             <div class="col-md-6 my-1 cart_mod1 bg-edit">
+                    <div>
+                        <div style="position: relative;">
+                            <div class="d-flex align-items-center">
+                                <input type="checkbox" class="toggle" name="serverCommandEnabled" style="right: 0; position: absolute;" <% if (serverCommandEnabled) { %> checked <% } %>>
+                                <h5 class="text-light feature-title mb-0 ml-2">/server Commands</h5>
+                               
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Collapsible Section for /avatar Command Settings -->
+                      
+                    </div>  
+                            <div class="col-md-6 my-1 cart_mod1 bg-edit">
+                    <div>
+                        <div style="position: relative;">
+                            <div class="d-flex align-items-center">
+                                <input type="checkbox" class="toggle" name="userCommandEnabled" style="right: 0; position: absolute;" <% if (userCommandEnabled) { %> checked <% } %>>
+                                <h5 class="text-light feature-title mb-0 ml-2">/user Commands</h5>
+                               
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Collapsible Section for /avatar Command Settings -->
+                      
+                    </div>   
+                               <div class="col-md-6 my-1 cart_mod1 bg-edit">
+                    <div>
+                        <div style="position: relative;">
+                            <div class="d-flex align-items-center">
+                                <input type="checkbox" class="toggle" name="pingCommandEnabled" style="right: 0; position: absolute;" <% if (pingCommandEnabled) { %> checked <% } %>>
+                                <h5 class="text-light feature-title mb-0 ml-2">/ping Commands</h5>
+                               
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Collapsible Section for /avatar Command Settings -->
+                      
+                    </div> 
+
+
+                <div class="col-md-6 my-1 cart_mod1 bg-edit">
+                    <div>
+                        <div style="position: relative;">
+                            <div class="d-flex align-items-center">
+                                <input type="checkbox" class="toggle" name="banCommandEnabled" style="right: 0; position: absolute;" <% if (banCommandEnabled) { %> checked <% } %>>
+                                <h5 class="text-light feature-title mb-0 ml-2">/ban Command</h5>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Collapsible Section for /avatar Command Settings -->
+
+                    </div>
+                         <div class="col-md-6 my-1 cart_mod1 bg-edit">
+                    <div>
+                        <div style="position: relative;">
+                            <div class="d-flex align-items-center">
+                                <input type="checkbox" class="toggle" name="unbanCommandEnabled" style="right: 0; position: absolute;" <% if (unbanCommandEnabled) { %> checked <% } %>>
+                                <h5 class="text-light feature-title mb-0 ml-2">/unban Commands</h5>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Collapsible Section for /avatar Command Settings -->
+
+                    </div>  
+                             <div class="col-md-6 my-1 cart_mod1 bg-edit">
+                    <div>
+                        <div style="position: relative;">
+                            <div class="d-flex align-items-center">
+                                <input type="checkbox" class="toggle" name="muteCommandEnabled" style="right: 0; position: absolute;" <% if (muteCommandEnabled) { %> checked <% } %>>
+                                <h5 class="text-light feature-title mb-0 ml-2">/mute Commands</h5>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Collapsible Section for /avatar Command Settings -->
+
+                    </div>  
+                            <div class="col-md-6 my-1 cart_mod1 bg-edit">
+                    <div>
+                        <div style="position: relative;">
+                            <div class="d-flex align-items-center">
+                                <input type="checkbox" class="toggle" name="unmuteCommandEnabled" style="right: 0; position: absolute;" <% if (unmuteCommandEnabled) { %> checked <% } %>>
+                                <h5 class="text-light feature-title mb-0 ml-2">/unmute Commands</h5>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Collapsible Section for /avatar Command Settings -->
+
+                    </div>   
+                               <div class="col-md-6 my-1 cart_mod1 bg-edit">
+                    <div>
+                        <div style="position: relative;">
+                            <div class="d-flex align-items-center">
+                                <input type="checkbox" class="toggle" name="hideCommandEnabled" style="right: 0; position: absolute;" <% if (hideCommandEnabled) { %> checked <% } %>>
+                                <h5 class="text-light feature-title mb-0 ml-2">/hide Commands</h5>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Collapsible Section for /avatar Command Settings -->
+
+                    </div> 
+
+
+<div class="col-md-6 my-1 cart_mod1 bg-edit">
+                    <div>
+                        <div style="position: relative;">
+                            <div class="d-flex align-items-center">
+                                <input type="checkbox" class="toggle" name="showCommandEnabled" style="right: 0; position: absolute;" <% if (showCommandEnabled) { %> checked <% } %>>
+                                <h5 class="text-light feature-title mb-0 ml-2">/show Command</h5>
+                             
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Collapsible Section for /avatar Command Settings -->
+                      
+                    </div>
+                         <div class="col-md-6 my-1 cart_mod1 bg-edit">
+                    <div>
+                        <div style="position: relative;">
+                            <div class="d-flex align-items-center">
+                                <input type="checkbox" class="toggle" name="langCommandEnabled" style="right: 0; position: absolute;" <% if (langCommandEnabled) { %> checked <% } %>>
+                                <h5 class="text-light feature-title mb-0 ml-2">/language Commands</h5>
+                               
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Collapsible Section for /avatar Command Settings -->
+                      
+                    </div>  
+                             <div class="col-md-6 my-1 cart_mod1 bg-edit">
+                    <div>
+                        <div style="position: relative;">
+                            <div class="d-flex align-items-center">
+                                <input type="checkbox" class="toggle" name="setupCommandEnabled" style="right: 0; position: absolute;" <% if (serverCommandEnabled) { %> checked <% } %>>
+                                <h5 class="text-light feature-title mb-0 ml-2">/setup Commands</h5>
+                               
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Collapsible Section for /avatar Command Settings -->
+                      
+                    </div>  
+                            <div class="col-md-6 my-1 cart_mod1 bg-edit">
+                    <div>
+                        <div style="position: relative;">
+                            <div class="d-flex align-items-center">
+                                <input type="checkbox" class="toggle" name="closeCommandEnabled" style="right: 0; position: absolute;" <% if (closeCommandEnabled) { %> checked <% } %>>
+                                <h5 class="text-light feature-title mb-0 ml-2">/close Commands</h5>
+                               
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Collapsible Section for /avatar Command Settings -->
+                      
+                    </div>   
+                               <div class="col-md-6 my-1 cart_mod1 bg-edit">
+                    <div>
+                        <div style="position: relative;">
+                            <div class="d-flex align-items-center">
+                                <input type="checkbox" class="toggle" name="openCommandEnabled" style="right: 0; position: absolute;" <% if (openCommandEnabled) { %> checked <% } %>>
+                                <h5 class="text-light feature-title mb-0 ml-2">/open Commands</h5>
+                               
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Collapsible Section for /avatar Command Settings -->
+                      
+                    </div> 
+<div class="col-md-6 my-1 cart_mod1 bg-edit">
+                    <div>
+                        <div style="position: relative;">
+                            <div class="d-flex align-items-center">
+                                <input type="checkbox" class="toggle" name="trustCommandEnabled" style="right: 0; position: absolute;" <% if (trustCommandEnabled) { %> checked <% } %>>
+                                <h5 class="text-light feature-title mb-0 ml-2">/trust Commands</h5>
+                               
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Collapsible Section for /avatar Command Settings -->
+                      
+                    </div> 
+
+<div class="col-md-6 my-1 cart_mod1 bg-edit">
+                    <div>
+                        <div style="position: relative;">
+                            <div class="d-flex align-items-center">
+                                <input type="checkbox" class="toggle" name="kickCommandEnabled" style="right: 0; position: absolute;" <% if (kickCommandEnabled) { %> checked <% } %>>
+                                <h5 class="text-light feature-title mb-0 ml-2">/kick Commands</h5>
+                               
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Collapsible Section for /avatar Command Settings -->
+                      
+                    </div> 
+
+<div class="col-md-6 my-1 cart_mod1 bg-edit">
+                    <div>
+                        <div style="position: relative;">
+                            <div class="d-flex align-items-center">
+                                <input type="checkbox" class="toggle" name="clearCommandEnabled" style="right: 0; position: absolute;" <% if (clearCommandEnabled) { %> checked <% } %>>
+                                  
+                                    
+                                <h5 class="text-light feature-title" style="text-align: left; margin-top: 5px;" style="left: 0; position: absolute;">/clear Commands</h5>
+                               
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Collapsible Section for /avatar Command Settings -->
+                      
+                    </div> 
+
+                
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+
+<script>
+    function toggleSection(sectionId) {
+        var section = document.getElementById(sectionId);
+        if (section.style.display === "none") {
+            section.style.display = "block";
+        } else {
+            section.style.display = "none";
+        }
+    }
+</script>
+
+
+
+
+<style>
+    .collapsible-section {
+        border: 1px solid #2d2d35;
+        border-radius: 5px;
+        padding: 15px;
+        background-color: #110f15;
+        color: #110f15;
+    }
+
+    .btn-secondary {
+        background-color: #5b45f9;
+        color: #110f15;
+        border: none;
+        border-radius: 30px;
+        padding: 5px 15px;
+        text-align: right; /* Aligns child elements to the left */
+    }
+
+    .btn-secondary i {
+        font-size: 14px;
+    }
+
+  
+
+    .form-control {
+        background-color: #110f15;
+        border: 1px solid #2d2d35;
+        color: #fff;
+    }
+
+    .form-control:focus {
+        border-color: #5b45f9;
+        background-color: #110f15;
+        box-shadow: 0 0 0 0.2rem rgba(91, 69, 249, 0.25);
+    }
+</style>
+
+
+                
+
+                <!-- Add other settings as needed -->
+
+            </div>
+        </form>
+    </section>
+    <!-- Welcome -->
+</div>
+
+<script>
+    // Add any necessary JavaScript here
+</script>
+
+
+
+<script>
+var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+  return new bootstrap.Tooltip(tooltipTriggerEl)
+})
+
+document.getElementById("utility").classList.add('btn-sidebar-active');
+
+document.getElementById("utility").classList.remove('btn-sidebar');
+
+
+</script>
+
+    </body>
+                        </html>

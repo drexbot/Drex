@@ -1,0 +1,262 @@
+<%- include('../include/source'); -%>
+
+<html>
+    <head>
+    <title><%= guild.name %> - Custom Commands</title>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Latest compiled and minified CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+
+        <link rel="stylesheet" href="/css/index.css">
+        <link rel="stylesheet" href="/css/dashboard.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
+        <script src="/dashboard.js"></script>
+        <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+
+    </head>
+    <body>
+<div class="wrapper">
+  
+    <%- include('../include/sidemenu'); -%>
+
+    <!-- Settings -->
+    <%- include('../include/header'); -%>
+<section class="content">
+    <div class="overview-all">
+        <h1>Custom Commands</h1>
+        <hr style="width: 90%; margin: 20px auto;">
+
+        <form method="POST">
+             
+            <div class="row mt-3" style="justify-content: center;">
+       
+    
+      
+
+               
+                
+              
+<button type="button" class="btn btn-primary" onclick="toggleSection('addCommand')">
+    <i class="fas fa-plus"></i> Add Command
+</button>
+
+<div id="addCommand" class="collapsible-section" style="display: none; margin-top: 20px;">
+    <form method="POST" action="/dashboard/<%= guild.id %>/custom-command">
+        <div class="form-group">
+            <label for="commandName">Command Name</label>
+            <input type="text" class="form-control" name="commandName" placeholder="Command Name" required>
+        </div>
+
+        <div class="form-group mt-3">
+            <label for="prefix">Command Prefix</label>
+            <input type="text" class="form-control" name="prefix" placeholder="Prefix" required>
+        </div>
+
+        <div class="form-group mt-3">
+            <input type="checkbox" class="toggle" name="contentEnabled">
+            <label for="contentEnabled">Content Enabled</label>
+        </div>
+
+        <div class="form-group mt-3" id="contentSection" style="display: none;">
+            <label for="contentText">Content Text</label>
+            <input type="text" class="form-control" name="contentText" placeholder="Content Text">
+        </div>
+
+        <div class="form-group mt-3">
+            <input type="checkbox" class="toggle" name="embedEnabled">
+            <label for="embedEnabled">Embed Enabled</label>
+        </div>
+
+        <div class="form-group mt-3" id="embedSection" style="display: none;">
+            <label for="embedTitle">Embed Title</label>
+            <input type="text" class="form-control" name="embedTitle" placeholder="Title">
+
+            <label for="embedDescription">Embed Description</label>
+            <input type="text" class="form-control" name="embedDescription" placeholder="Description">
+
+            <label for="embedImage">Embed Image URL</label>
+            <input type="text" class="form-control" name="embedImage" placeholder="Image URL">
+
+            <label for="embedThumbnail">Embed Thumbnail URL</label>
+            <input type="text" class="form-control" name="embedThumbnail" placeholder="Thumbnail URL">
+        </div>
+
+        <button type="submit" class="btn btn-success mt-3">Add Command</button>
+    </form>
+    <!-- Add/Edit Command Form -->
+<% commands.forEach(command => { %>
+  <div class="collapsible-section" style="margin-top: 20px;">
+    <form method="POST" action="/dashboard/<%= guild.id %>/custom-command/edit/<%= command._id %>">
+      <div class="form-group">
+        <label for="commandName">Command Name</label>
+        <input type="text" class="form-control" name="commandName" value="<%= command.commandName %>" required>
+      </div>
+
+      <div class="form-group mt-3">
+        <label for="prefix">Command Prefix</label>
+        <input type="text" class="form-control" name="prefix" value="<%= command.prefix %>" required>
+      </div>
+
+      <div class="form-group mt-3">
+        <input type="checkbox" class="toggle" name="contentEnabled" <%= command.contentEnabled ? 'checked' : '' %>>
+        <label for="contentEnabled">Content Enabled</label>
+      </div>
+
+      <div class="form-group mt-3" id="contentSection" style="display: <%= command.contentEnabled ? 'block' : 'none' %>;">
+        <label for="contentText">Content Text</label>
+        <input type="text" class="form-control" name="contentText" value="<%= command.contentText %>">
+      </div>
+
+      <div class="form-group mt-3">
+        <input type="checkbox" class="toggle" name="embedEnabled" <%= command.embedEnabled ? 'checked' : '' %>>
+        <label for="embedEnabled">Embed Enabled</label>
+      </div>
+
+      <div class="form-group mt-3" id="embedSection" style="display: <%= command.embedEnabled ? 'block' : 'none' %>;">
+        <label for="embedTitle">Embed Title</label>
+        <input type="text" class="form-control" name="embedTitle" value="<%= command.embed.title %>">
+
+        <label for="embedDescription">Embed Description</label>
+        <input type="text" class="form-control" name="embedDescription" value="<%= command.embed.description %>">
+
+        <label for="embedImage">Embed Image URL</label>
+        <input type="text" class="form-control" name="embedImage" value="<%= command.embed.image %>">
+
+        <label for="embedThumbnail">Embed Thumbnail URL</label>
+        <input type="text" class="form-control" name="embedThumbnail" value="<%= command.embed.thumbnail %>">
+      </div>
+
+      <button type="submit" class="btn btn-warning mt-3">Save Changes</button>
+    </form>
+
+    <!-- Delete Command Form -->
+    <form method="POST" action="/dashboard/<%= guild.id %>/custom-command/delete/<%= command._id %>" style="margin-top: 10px;">
+      <button type="submit" class="btn btn-danger">Delete Command</button>
+    </form>
+  </div>
+<% }); %>
+
+</div>
+
+<script>
+    
+    function toggleSection(sectionId) {
+        var section = document.getElementById(sectionId);
+        if (section.style.display === "none") {
+            section.style.display = "block";
+        } else {
+            section.style.display = "none";
+        }
+    }
+
+    document.querySelector('[name="contentEnabled"]').addEventListener('change', function() {
+        document.getElementById('contentSection').style.display = this.checked ? 'block' : 'none';
+    });
+
+    document.querySelector('[name="embedEnabled"]').addEventListener('change', function() {
+        document.getElementById('embedSection').style.display = this.checked ? 'block' : 'none';
+    });
+</script>
+
+                <!-- $avatar Command -->
+               
+                
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+
+<script>
+  
+    function toggleSection(sectionId) {
+        var section = document.getElementById(sectionId);
+        if (section.style.display === "none") {
+            section.style.display = "block";
+        } else {
+            section.style.display = "none";
+        }
+    }
+</script>
+
+
+
+
+<style>
+    .collapsible-section {
+        border: 1px solid #2d2d35;
+        border-radius: 5px;
+        padding: 15px;
+        background-color: #110f15;
+        color: #110f15;
+    }
+
+    .btn-secondary {
+        background-color: #5b45f9;
+        color: #110f15;
+        border: none;
+        border-radius: 30px;
+        padding: 5px 15px;
+        right: 0;
+        text-align: right; /* Aligns child elements to the left */
+    }
+
+    .btn-secondary i {
+        font-size: 14px;
+    }
+
+  
+
+    .form-control {
+        background-color: #110f15;
+        border: 1px solid #2d2d35;
+        color: #fff;
+    }
+
+    .form-control:focus {
+        border-color: #5b45f9;
+        background-color: #110f15;
+        box-shadow: 0 0 0 0.2rem rgba(91, 69, 249, 0.25);
+    }
+</style>
+
+
+                
+
+                <!-- Add other settings as needed -->
+
+            </div>
+        </form>
+    </section>
+    <!-- Welcome -->
+</div>
+
+<script>
+    // Add any necessary JavaScript here
+</script>
+
+
+
+<script>
+var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+  return new bootstrap.Tooltip(tooltipTriggerEl)
+})
+
+document.getElementById("custom-commands").classList.add('btn-sidebar-active');
+
+document.getElementById("custom-commands").classList.remove('btn-sidebar');
+
+
+</script>
+
+    </body>
+                        </html>

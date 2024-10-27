@@ -1,0 +1,11 @@
+{
+  "token": "",
+  "prefix": "!",
+  "mongooseConnectionString": "mongodb://127.0.0.1:27017/test",
+  "color": "#2099dd",
+  "idSupport": "955570036616081468",
+  "idEarlyusers": "955570036616081468",
+  "idGuildLeave": "928745604899827792",
+  "logo": "https://cdn.discordapp.com/attachments/1009180281837715647/1009457613886455870/Logo.png",
+  "discord": "4TGG6cZHkB"
+}

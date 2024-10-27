@@ -1,0 +1,11 @@
+{
+    "website": {
+    "domain" : "https://06c6223a-b1cf-453b-a153-8d75ddd4569c-00-twiupoa1c2e6.sisko.replit.dev"
+    },
+    "config": {
+        "port": 3000,
+        "callback": "https://06c6223a-b1cf-453b-a153-8d75ddd4569c-00-twiupoa1c2e6.sisko.replit.dev/callback",
+        "clientID": "773483969697808385",
+        "secret": "n8flnbDGIyerReSsxOZoubRM7Lxzw1jl"
+    }
+}

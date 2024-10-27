@@ -1,0 +1,48 @@
+<% const servers = [
+  { name: 'PewDiePie | Floor Gang', icon: 'https://cdn.discordapp.com/icons/718433475828645928/91d939729e0d708087204ec3739f00f4.jpg?size=128', members: '200,000', verified: 1 },
+  { name: 'PUBG Mobile Mena', icon: 'https://cdn.discordapp.com/icons/464973904058777600/8d5776a837bac580a3f05250b286184f.webp?size=128', members: '150,000', verified: 1 },
+  // Add more servers...
+];
+
+%>
+
+<div class="tw-flex tw-flex-col tw-items-center tw-justify-center tw-gap-[25px]">
+  <div class="landing-para tw-text-center tw-text-sm tw-font-bold tw-text-gray-400">
+    <span class="tw-font-bold tw-text-gray-50">9,000,000</span> servers trusted.
+  </div>
+
+  <!-- Marquee-like scrolling div -->
+  <div class="marquee">
+    <% const selectedServers = locale === 'tr' ? TRservers : locale === 'ar' ? ARservers : servers; %>
+    <% selectedServers.forEach((server, index) => { %>
+      <div class="tw-ml-[48px] tw-flex tw-items-center tw-gap-4">
+        <img src="<%= server.icon %>" class="tw-block tw-h-[48px] tw-w-[48px] tw-rounded" alt="<%= server.name %>" />
+        <div class="tw-flex tw-flex-col">
+          <div class="tw-flex tw-flex-row tw-items-center tw-gap-1">
+            <p class="landing-para"><%= server.name %></p>
+            <% if (server.verified === 1) { %>
+              <img src="/path/to/verified_icon.png" alt="Verified" />
+            <% } else if (server.verified === 2) { %>
+              <img src="/path/to/partner_icon.png" alt="Partner" />
+            <% } %>
+          </div>
+          <p class="landing-para tw-text-gray-400"><%= server.members %> Members</p>
+        </div>
+      </div>
+    <% }); %>
+  </div>
+</div>
+
+<style>
+  .marquee {
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: marquee 20s linear infinite;
+  }
+
+  @keyframes marquee {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+  }
+</style>
