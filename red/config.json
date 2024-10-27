@@ -1,0 +1,11 @@
+{
+  "token": "OTM2Mzk2NzgyMjE5NDQwMjA5.YfMldg.1NYa0oUWjJXK86bd4SUAjovc8Dk",
+  "prefix": "!",
+  "mongooseConnectionString": "mongodb://clarkdb:clarkdb@cluster0.lsk6g6m.mongodb.net/db",
+  "color": "#de0c3e",
+  "idSupport": "857590078750064660",
+  "idEarlyusers": "928745604899827792",
+  "idGuildLeave": "928745604899827792",
+  "logo": "https://cdn.discordapp.com/attachments/1009180242516127784/1009457308423684198/Logo.png",
+  "discord": "4TGG6cZHkB"
+}

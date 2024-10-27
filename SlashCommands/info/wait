@@ -1,0 +1,29 @@
+const { Client, CommandInteraction, ApplicationCommandType, MessageEmbed } = require("discord.js");
+const GuildSettings = require('../../schemas/Guild'); // Update the path as necessary
+
+module.exports = {
+    name: "wait",
+    description: "Wait command description",
+    type: ApplicationCommandType.ChatInput,
+    run: async (client, interaction) => {
+        const guildId = interaction.guild.id;
+        const guildSettings = await GuildSettings.findById(guildId);
+
+        if (!guildSettings || !guildSettings.commandsEnabled) {
+            return interaction.reply({ content: "This command is currently disabled for this server.", ephemeral: true });
+        }
+
+        if (guildSettings.waitEmbed && guildSettings.waitEmbed.enabled) {
+            const embed = new MessageEmbed()
+                .setTitle(guildSettings.waitEmbed.title || "Default Title")
+                .setDescription(guildSettings.waitEmbed.description || "Default Description")
+                .setImage(guildSettings.waitEmbed.image || null)
+                .setThumbnail(guildSettings.waitEmbed.thumbnail || null)
+                .setColor('#5b45f9');
+
+            await interaction.reply({ embeds: [embed] });
+        } else {
+            await interaction.reply(guildSettings.waitEmbed.content || "Default Content");
+        }
+    },
+};

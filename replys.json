@@ -1,0 +1,436 @@
+{
+  "ar": {
+    "lang": "> **تم تحديث اللغة الى اللغة العربية 📚**",
+    "permErr": "> **لا يمكنك فعل ذلك 🎛️**",
+    "err": "> ** ⚠️ - يوجد خطأ ما ، يُمكِنك التّوجه للدعم :** [support]",
+    "setup": "> ** ✅ - تم إعداد سيرفرك للإعدادات الإفتراضية ..**",
+    "avatar" : {
+      "title" : "- الصورة الرمزية",
+      "button" : "تحميل"
+    },
+    "help" : {
+      "title": "قائمة الأوامر",
+      "prefix": "البادئة",
+      "commands": "الأوامر",
+      "gloabal": "الأوامر العامة",
+      "admin": "الأوامر الإدارية",
+      "premium": "الأوامر المدفوعة",
+      "buttons": {
+        "invite": "دعوة",
+        "support": "مساعدة",
+        "website": "الموقع"
+      },
+      "fields": {
+        "servers": "الخوادم",
+        "channels": "القنوات",
+        "users": "المستخدمين"
+      }
+    },
+    "server": {
+      "id": {
+        "title": "المُعرف"
+      },
+      "created": {
+        "title": "تم إنشاءه"
+      },
+      "owner": {
+        "title": "المالك"
+      },
+      "members": {
+        "title": "الأعضاء",
+        "boosts": "التعزيز"
+      },
+      "channels": {
+        "title": "القنوات",
+        "voice": "الصوتية",
+        "text": "الكتابية"
+      },
+      "other": {
+        "title": "أُخرى",
+        "info": "المنطقة"
+      }
+    },
+    "user" : {
+      "discord": "إنضم إلى الديسكورد",
+      "server": "إنضم إلى الخادم",
+      "button": "تحميل الصورة الرمزية"
+    },
+    "ban" : {
+      "choose": "> ⚠️ - يجب عليك إختيار **أحد** لحظره مِن الخآدم ..",
+      "me": "> ⚠️ - لا أستطيع **حظر نفسي** ، إذا كُنت تجِد صعوبة في إستخدامي ، توجه إلى خادم المساعدة ..",
+      "cant": ">  ⚠️ - أنت لا **تستطيع** حظر هذا المُستخدِم ..",
+      "done": "> ✅ - [user] تم **حظره** مِن الخادم .."
+    },
+    "unban" : {
+      "me": "> 🙂 كيف تريد فك الحظر عني وأنت تستخدمني ؟ ..",
+      "done": "> ✅ - [user] تم **فك حظره** مِن الخادم .."
+    },
+    "unban_all": {
+      "err": "> ⚠️ - **لا يوجد مستخدمين **محظورين..",
+      "done": "> ✅ - [count] تم **فك حظرهم** مِن الخادم.."
+    },
+    "hide": {
+      "err": "> ⚠️ - هذه القناة **مخفية** بالفعل ..",
+      "done": "> ✅ - **تم إخفاء **القناة.."
+    },
+    "hide_all": {
+      "done": "> ✅ - **تم إخفاء **`[channels]` قناة.."
+    },
+    "close_all": {
+      "done": "> ✅ - **تم إغلاق **`[channels]` قناة.."
+    },
+    "open_all": {
+      "done": "> ✅ - **تم فتح **`[channels]` قناة.."
+    },
+    "show_all": {
+      "done": "> ✅ - **تم إظهار **`[channels]` قناة.."
+    },
+    "show": {
+      "err": "> ⚠️ - هذه القناة **ظاهرة** بالفعل ..",
+      "done": "> ✅ - **تم إظهار **القناة.."
+    },
+    "close": {
+      "done": "> **✅ - تم إغلاق الدردشة ..**"
+    },
+    "clear": {
+      "done": "> **✅ - تم مسح `[messages]` رسالة في هذه القناة..**"
+    },
+    "open": {
+      "done": "> ** ✅ - تم فتح الدردشة ..**"
+    },
+    "kick" : {
+      "choose": "> ⚠️ - يجب عليك إختيار **أحد** لطرده مِن الخآدم ..",
+      "me": "> ⚠️ - لا أستطيع **طرد نفسي** ، إذا كُنت تجِد صعوبة في إستخدامي ، توجه إلى خادم المساعدة ..",
+      "cant": ">  ⚠️ - أنت لا **تستطيع** طرد هذا المُستخدِم ..",
+      "done": "> ✅ - [user] تم **طرده** مِن الخادم .."
+    },
+    "mute": {
+      "already": "> ** ⚠️ - [user] تم اسكاته مِن قبل ..**",
+      "cant": "> ** ⚠️ - أنت لا **تستطيع** إسكات هذا المُستخدِم ..**",
+      "me": "> ** ⚠️ - لا استطيع اسكات نفسي ..**",
+      "done": "> ** ✅ - [user] تم اسكاته ..**"
+    },
+    "unmute": {
+      "already": "> ** ⚠️ - [user] ليس قيد الإسكات ..**",
+      "cant": "> ** ⚠️ - أنت لا **تستطيع** فك إسكات هذا المُستخدِم ..**",
+      "done": "> ** ✅ - [user] تم فك اسكاته ..**"
+    },
+    "trust": {
+      "err": "> ** ⚠️ - لا تستطيع السماح له الدخول للوحة التحكم الا اذا كان يمتلك الصلاحيات ..**",
+      "errBot": "> ** ⚠️ - لا تستطيع السماح للبوتات بالدخول الى لوحة التحكم ..**",
+      "errOwner": "> ** ⚠️ - لا تستطيع اضافة نفسك الى لوحة التحكم ..**",
+      "errAlredy": "> ** ⚠️ - هذا المستخدم مُضاف من قبل في لوحة التحكم ..**",
+      "done": "> ** ✅ - تم اضافته الى لوحة التحكم ..**",
+      "errAlredyRemove": "> ** ⚠️ - هذا المستخدم ليس موجود بلوحة التحكم ..**",
+      "doneRemove": "> ** ✅ - تم إزالته من لوحة التحكم ..**"
+    },
+    "setusername": {
+      "err": "> ** ⚠️ - لا يمكنني التغيير الى هذا الإسم لإن هذا الاسم تم إستخدامه مسبقا ..**",
+      "done": "> ** ✅ - تم التغيير الى الاسم الجديد ..**"
+    },
+    "setavatar": {
+      "err": "> ** ⚠️ - تأكد من رابط الصورة الرمزية ..**",
+      "done": "> ** ✅ - تم التغيير الى الصورة الجديدة ..**"
+    },
+    "setactivity": {
+      "err": "> ** ⚠️ - يوجد خطأ ما ..**",
+      "done": "> ** ✅ - تم التغيير الى الحالة الجديدة ..**"
+    },
+    "theme": {
+       "done": "> ** ✅ - تم تغيير السِّمة لـ [theme] ..**"
+     },
+    "antiLinkDelete": "> ** ⚠️ - تم إزالة الرابط الذي قُمت بإرساله ..**",
+    "antiLinkMute": "> ** ⚠️ - [user], تم إسكاته بـ سبب : `إرسال أكثر من 5 روابط` ..**",
+    "antiSpamMute": "> ** ⚠️ - [user], تم إسكاته بـ سبب : `السبام (أرسل أكثر من 5 رسائل في أقل من 5 ثواني)` ..**"
+  },
+  "en": {
+    "lang": "> **The language has been updated to English 📚**",
+    "permErr": "> **You can't do that 🎛️**",
+    "err": "> ** ⚠️ - Something went wrong, you can contact support :** [support]",
+    "setup": "> ** ✅ - Your server is set to default settings..**",
+    "avatar" : {
+      "title": "- Avatar",
+      "button": "Download"
+    },
+    "help" : {
+      "title": "List of Commands",
+      "prefix": "Prefix",
+      "commands": "Commands",
+      "gloabal": "Gloabal Commands",
+      "admin": "Admin Commands",
+      "premium": "Premium Commands",
+      "buttons": {
+        "invite": "Invite",
+        "support": "Support",
+        "website": "Website"
+      },
+      "fields": {
+        "servers": "Servers",
+        "channels": "Channels",
+        "users": "Users"
+      }
+    },
+    "server": {
+      "id": {
+        "title": "Identifier"
+      },
+      "created": {
+        "title": "Created"
+      },
+      "owner": {
+        "title": "Owner"
+      },
+      "members": {
+        "title": "Members",
+        "boosts": "Boost"
+      },
+      "channels": {
+        "title": "Channels",
+        "voice": "Voice",
+        "text": "Text"
+      },
+      "other": {
+        "title": "Other",
+        "info": "Area"
+      }
+    },
+    "user" : {
+      "discord": "Join the Discord",
+      "server": "Join the Server",
+      "button": "Download Avatar"
+    },
+    "ban": {
+      "choose": "> ⚠️ - You must choose **one** to ban it from the server..",
+      "me": "> ⚠️ - I can't **ban myself**, if you find it difficult to use me, head to the help server..",
+      "cant": "> ⚠️ - You cannot **ban** this user..",
+      "done": "> ✅ - [user] **Banned** from server.."
+    },
+    "unban": {
+      "me": "> 🙂 How do you want to unban me while you are using me? ..",
+      "done": "> ✅ - [user] **Unbanned** from server.."
+    },
+    "unban_all": {
+      "err": "> ⚠️ - There are no banned users..",
+      "done": "> ✅ - [count] **Unbanned** from server.."
+    },
+    "hide": {
+      "err": "> ⚠️ - This channel already **hidden** from everyone ..",
+      "done": "> ✅ - This **channel** is now hidden from everyone.."
+    },
+    "hide_all": {
+      "done": "> ✅ - **`[channels]` channel** is now hidden from everyone.."
+    },
+    "close_all": {
+      "done": "> ✅ - **`[channels]` channel** is now closed.."
+    },
+    "open_all": {
+      "done": "> ✅ - **`[channels]` channel** is now opened.."
+    },
+    "show_all": {
+      "done": "> ✅ - **`[channels]` channel** is now appears from everyone.."
+    },
+    "show": {
+      "err": "> ⚠️ - This channel already **appears** for everyone ..",
+      "done": "> ✅ - This **channel** is now appears for everyone.."
+    },
+    "close": {
+      "done": "> **✅ - Chat closed..**"
+    },
+    "clear": {
+      "done": "> **✅ - Cleared `[messages]` message in this chat..**"
+    },
+    "open": {
+      "done": "> ** ✅ - Chat opened..**"
+    },
+    "kick" : {
+      "choose": "> ⚠️ - You must choose **one** to kick him off the server..",
+      "me": "> ⚠️ - I can't ** kick myself out **, if you find it difficult to use me, head to the help server..",
+      "cant": "> ⚠️ - You cannot ** kick this user out..",
+      "done": "> ✅ - [user] has been ** kicked ** from the server.."
+    },
+    "mute": {
+      "already": "> ** ⚠️ - [user] has been silenced by..**",
+      "cant": "> ** ⚠️ - You cannot **silence this user..**",
+      "me": "> ** ⚠️ - I can't silence myself..**",
+      "done": "> ** ✅ - [user] was silenced..**"
+    },
+    "unmute": {
+      "already": "> ** ⚠️ - [user] is not being silenced..**",
+      "cant": "> ** ⚠️ - You cannot ** un-silence this user..**",
+      "done": "> ** ✅ - [user] has been unmuted..**"
+    },
+    "trust": {
+      "err": "> ** ⚠️ - You cannot allow him to enter the control panel unless he has the permissions ..**",
+      "errBot": "> ** ⚠️ - You cannot allow bots to enter the control panel..**",
+      "errOwner": "> ** ⚠️ - You cannot add yourself to the control panel..**",
+      "errAlredy": "> ** ⚠️ - This user has already been added to the control panel..**",
+      "done": "> ** ✅ - Added to the control panel ..**",
+      "errAlredyRemove": "> ** ⚠️ - This user is not in the control panel ..**",
+      "doneRemove": "> ** ✅ - Removed from Control Panel..**"
+    },
+    "setusername": {
+       "err": "> ** ⚠️ - I cannot change to this name because this name has already been used ..**",
+       "done": "> ** ✅ - Changed to the new name..**"
+     },
+    "setavatar": {
+       "err": "> ** ⚠️ - Check the avatar link ..**",
+       "done": "> ** ✅ - Changed to the new image..**"
+     },
+    "setactivity": {
+       "err": "> ** ⚠️ - Something went wrong..**",
+       "done": "> ** ✅ - Changed to new status..**"
+     },
+    "theme": {
+       "done": "> ** ✅ - Changed theme to [theme] ..**"
+     },
+    "antiLinkDelete": "> ** ⚠️ - The link you sent has been removed..**",
+    "antiLinkMute": "> ** ⚠️ - [user], silenced with reason: `More than 5 links sent` ..**",
+    "antiSpamMute": "> ** ⚠️ - [user], silenced with reason: `Spam (send more than 5 messages in less than 5 seconds)` ..**"
+  },
+  
+    "ku": {
+      "lang": "> **زمان بۆ کوردی سۆرانی نوێکرایەوە 📚**",
+      "permErr": "> **تۆ ناتوانیت ئەمە بکەیت 🎛️**",
+      "err": "> ** ⚠️ - هەڵەیەکی بەرز ڕویدا، دەتوانیت پەیوەندیت بکەیت بەرەو پاراستن :** [support]",
+      "setup": "> ** ✅ - فەرمی پەیوەندەکانەکان بەرەو شێوەی پەیوەندەی بنچینەیی پەیوەند کرا..**",
+      "avatar": {
+        "title": "- وێنە",
+        "button": "داگرتن"
+      },
+      "help" : {
+      "title": "List of Commands",
+      "prefix": "Prefix",
+      "commands": "Commands",
+      "gloabal": "Gloabal Commands",
+      "admin": "Admin Commands",
+      "premium": "Premium Commands",
+      "buttons": {
+        "invite": "Invite",
+        "support": "Support",
+        "website": "Website"
+      },
+      "fields": {
+        "servers": "Servers",
+        "channels": "Channels",
+        "users": "Users"
+      }
+    },
+      "server": {
+        "id": {
+          "title": "ناسنامە"
+        },
+        "created": {
+          "title": "درەنجامی"
+        },
+        "owner": {
+          "title": "خاوەند"
+        },
+        "members": {
+          "title": "ئەندامان",
+          "boosts": "پیشکەش"
+        },
+        "channels": {
+          "title": "کەنالەکان",
+          "voice": "دەنگ",
+          "text": "نەوت"
+        },
+        "other": {
+          "title": "یەکێکی تر",
+          "info": "ناوچە"
+        }
+      },
+      "user": {
+        "discord": "لە دیسکۆرد بەرەوپێش",
+        "server": "بە شەبەکە بەرەوپێش",
+        "button": "داگرتنی وێنە"
+      },
+      "ban": {
+        "choose": "> ⚠️ - پێویستە **یەک** هەڵبژیریت بۆ لە سێرڤەرەوە..",
+        "me": "> ⚠️ - ناتوانم **خۆم لابم**، ئەگەر زۆر قسەی تایبەتی بەکاربەر بەرەوپێش، بەرەو شەبەکە بەرەوپێش..",
+        "cant": "> ⚠️ - ناتوانیت ئەم بەکارهێنەرە **لابی**..",
+        "done": "> ✅ - [user] **بەسەر لابرا** لە سێرڤەرەوە.."
+      },
+      "unban": {
+        "me": "> 🙂 چۆن دەتەوێت خۆم لە لابوونەوە کاتێك تۆ لە ئەمە بەکار دەهێنیت؟",
+        "done": "> ✅ - [user] **لە لابوونەوە بوو** لە سێرڤەرەوە.."
+      },
+      "unban_all": {
+        "err": "> ⚠️ - لەو کاتەدا هیچ بەکارهێنەرە لابوو نییە..",
+        "done": "> ✅ - [count] **لە لابوونەوە بوو** لە سێرڤەرەوە.."
+      },
+      "hide": {
+        "err": "> ⚠️ - ئەم کەنالە بە شێوەیەکی تایبەتی خەفە کراوە..",
+        "done": "> ✅ - ئەم **کەنالە** ئەمشەوە بەرەو هەموو شتەکان خەفە کرا.."
+      },
+      "hide_all": {
+        "done": "> ✅ - **`[channels]` کەنالەکان** ئەمشەوە بەرەو هەموو شتەکان خەفە کرا.."
+      },
+      "close_all": {
+        "done": "> ✅ - **`[channels]` کەنالەکان** ئەمشەوە داخرا.."
+      },
+      "open_all": {
+        "done": "> ✅ - **`[channels]` کەنالەکان** ئەمشەوە پەیوەند کرا.."
+      },
+      "show_all": {
+        "done": "> ✅ - **`[channels]` کەنالەکان** بەرەو هەموو شتەکان پەیوەند کرا.."
+      },
+      "show": {
+        "err": "> ⚠️ - ئەم کەنالە بە شێوەیەکی تایبەتی پەیوەند بەرەو هەموو شتەکان..",
+        "done": "> ✅ - ئەم **کەنالە** ئەمشەوە بەرەو هەموو شتەکان پەیوەند کرا.."
+      },
+      "close": {
+        "done": "> **✅ - قسە داخرا..**"
+      },
+      "clear": {
+        "done": "> **✅ - `[messages]` پەیامەکان لە ئەم قسەیەدا پاك کرا..**"
+      },
+      "open": {
+        "done": "> ** ✅ - قسە پەیوەند کرا..**"
+      },
+      "kick": {
+        "choose": "> ⚠️ - پێویستە **یەک** هەڵبژیریت بۆ لابردنەوە لە سێرڤەرەوە..",
+        "me": "> ⚠️ - ناتوانم **خۆم لابم**، ئەگەر زۆر قسەی تایبەتی بەکاربەر بەرەوپێش، بەرەو شەبەکە بەرەوپێش..",
+        "cant": "> ⚠️ - ناتوانیت ئەم بەکارهێنەرە **لاببەیت**..",
+        "done": "> ✅ - [user] **لە سێرڤەرەوە لابوو**.."
+      },
+      "mute": {
+        "already": "> ** ⚠️ - [user] بەرەوپێش بەرز بوو..**",
+        "cant": "> ** ⚠️ - ناتوانیت ئەم بەکارهێنەرە ** بەرز بکەیت..**",
+        "me": "> ** ⚠️ - ناتوانم خۆم بەرز بکەم..**",
+        "done": "> ** ✅ - [user] بەرز بوو..**"
+      },
+      "unmute": {
+        "already": "> ** ⚠️ - [user] بەرز نییە..**",
+        "cant": "> ** ⚠️ - ناتوانیت ئەم بەکارهێنەرە ** لاببەیت..**",
+        "done": "> ** ✅ - [user] لە بەرز بەرز بوو..**"
+      },
+      "trust": {
+        "err": "> ** ⚠️ - ناتوانیت بەرەوپێش بەرز بکەیت ئەگەر ئەم بەکارهێنەرە تێیدا هەیە ..**",
+        "errBot": "> ** ⚠️ - ناتوانیت بەتاندی بەکارهێنەرە بەرز بکەیت..**",
+        "errOwner": "> ** ⚠️ - ناتوانیت خۆت لە بەرز بکەیت..**",
+        "errAlredy": "> ** ⚠️ - ئەم بەکارهێنەرە پێشتر لە بەرز بوو..**",
+        "done": "> ** ✅ - بەرز بوو لە لە شێوەی تایبەتی..**",
+        "errAlredyRemove": "> ** ⚠️ - ئەم بەکارهێنەرە لە شێوەی تایبەتی نییە..**",
+        "doneRemove": "> ** ✅ - لە شێوەی تایبەتی لابوو..**"
+      },
+      "setusername": {
+        "err": "> ** ⚠️ - ناتوانم بگەڕێم بۆ ئەم ناوی نوێیە چونکە ئەم ناویە پێشتر بەکار هاتووە..**",
+        "done": "> ** ✅ - بگەڕێنەوە بۆ ناوی نوێ..**"
+      },
+      "setavatar": {
+        "err": "> ** ⚠️ - پەیوەندەی وێنەکە تاقی بکەوە..**",
+        "done": "> ** ✅ - بگەڕێنەوە بۆ وێنەی نوێ..**"
+      },
+      "setactivity": {
+        "err": "> ** ⚠️ - هەڵەیەکی بەرز ڕویدا..**",
+        "done": "> ** ✅ - بگەڕێنەوە بۆ ئیشەی نوێ..**"
+      },
+      "theme": {
+        "done": "> ** ✅ - بگەڕێنەوە بۆ شێوەی [theme] ..**"
+      },
+      "antiLinkDelete": "> ** ⚠️ - لینکی کە ناردووتە لەسەر لابردرا..**",
+      "antiLinkMute": "> ** ⚠️ - [user] بەرز بوو بە هۆی: `زیاتر لە 5 لینکی ناردن` ..**",
+      "antiSpamMute": "> ** ⚠️ - [user] بەرز بوو بە هۆی: `سپاوم (زیاتر لە 5 پەیام لە کەمتر لە 5 چرکە)` ..**"
+    }
+  }
+

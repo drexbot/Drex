@@ -1,0 +1,11 @@
+{
+  "token": "NzczNDgzOTY5Njk3ODA4Mzg1.GL3L94.SDmb54EqbltYFTsbS77W4stchx6nc8RnPSKjys",
+  "prefix": "!",
+  "mongooseConnectionString": "mongodb://127.0.0.1:27017/test",
+  "color": "#5865F2",
+  "idSupport": "1030758662056181770",
+  "idEarlyusers": "955570036616081468",
+  "idGuildLeave": "1030758662056181770",
+  "logo": "https://media.discordapp.net/attachments/1078637928965750844/1078637992043880489/1669987372073_c46e70c4f3e9b6eb067745bb404b1b85.jpeg-1.jpg",
+  "discord": "AxhJStweGX"
+}
